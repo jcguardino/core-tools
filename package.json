@@ -1,6 +1,6 @@
 {
 	"name": "core-tools",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Core Tools",
 	"license": "MIT",
 	"main": "./core.js",
@@ -13,7 +13,7 @@
 	},
 	"scripts": {
 	},
-	"devDependencies": {
+	"dependencies": {
 		"camel-case": "^3.0.0",
 		"crypto-js": "^3.1.6",
 		"express": "^4.14.0",
