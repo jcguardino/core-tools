@@ -1,6 +1,6 @@
 {
 	"name": "core-tools",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "Core Tools",
 	"license": "MIT",
 	"main": "./core.js",
@@ -12,6 +12,7 @@
         "url": "https://github.com/jcguardino/core-tools.git"
 	},
 	"scripts": {
+		"test": "node test/run"
 	},
 	"dependencies": {
 		"camel-case": "^3.0.0",
