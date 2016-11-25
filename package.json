@@ -1,6 +1,6 @@
 {
   "name": "core-tools",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Core Tools",
   "license": "MIT",
   "main": "./core.js",
