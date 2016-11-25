@@ -11,6 +11,10 @@ assert.equal(core.config.get('myConfig'), 'config');
 assert.equal(core.config.get('myConfig-overwrite'), 'overwrite');
 assert.equal(core.config.get('myConfig-env'), 'env');
 
+// config-set
+core.config.set('test-config', 'config');
+assert.equal(core.config.get('test-config'), 'config');
+
 // string
 assert.equal(core.string.format('the value is {0}.', 'value'), 'the value is value.');
 assert.equal(core.string.format('{0}:{1}', ['key', 'value']), 'key:value');
