@@ -1,13 +1,6 @@
-var Config = require('./lib/config');
-var Security = require('./lib/security');
-var Logger = require('./lib/logger');
-var String = require('./lib/string');
+'use strict';
+const index = require('./index');
 
-var Core = {
-	config: new Config(),
-	security: new Security(),
-	logger: new Logger(),
-	string: new String()
-};
+// Kept as a legacy alias for the exported object now called "tools"
 
-module.exports = Core;
+module.exports = index;

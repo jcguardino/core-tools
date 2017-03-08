@@ -1,5 +1,5 @@
-var assert = require('assert');
-var core = require('../core');
+const assert = require('assert');
+const core = require('../core');
 
 // config
 core.config.init({
@@ -23,11 +23,11 @@ assert.equal(core.string.camelCase('abc-def'), 'abcDef');
 assert.equal(core.string.pascalCase('abc-def'), 'AbcDef');
 
 // security
-var encrypted = core.security.encryptString('test', 'key');
+const encrypted = core.security.encryptString('test', 'key');
 assert.equal(core.security.decryptString(encrypted, 'key'), 'test');
 
 // logger
-var logText = core.logger.log('{0}', 'ok', {returnValue: true});
+const logText = core.logger.log('ok', {returnValue: true});
 assert.ok(/\d+\/\d+ @ \d+:\d+:\d+ - ok/.exec(logText));
 
 console.log('All tests passed');
