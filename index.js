@@ -9,7 +9,7 @@ const string = require('./lib/string');
 module.exports = {
 	config: config,
 	exception: exception,
-	log: logger,
+	logger: logger,
 	security: security,
 	string: string
 };
