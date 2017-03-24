@@ -30,4 +30,19 @@ assert.equal(core.security.decryptString(encrypted, 'key'), 'test');
 const logText = core.logger.log('ok', {returnValue: true});
 assert.ok(/\d+\/\d+ @ \d+:\d+:\d+ - ok/.exec(logText));
 
+// file
+const files = core.file.readdirRecursiveSync(__dirname);
+const searchFilePatterns = [/settings-local\.json/, /settings\.json/, /run\.js/];
+let foundCount = 0;
+
+for (let pattern of searchFilePatterns) {
+	for (let file of files) {
+		if (pattern.test(file)) {
+			foundCount++;
+		}
+	}
+}
+
+assert.equal(foundCount, files.length, 'Expected file(s) not returned from file.readdirRecursiveSync()');
+
 console.log('All tests passed');
