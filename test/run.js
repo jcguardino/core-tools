@@ -31,7 +31,8 @@ const logText = core.logger.log('ok', {returnValue: true});
 assert.ok(/\d+\/\d+ @ \d+:\d+:\d+ - ok/.exec(logText));
 
 // file
-const files = core.file.readdirRecursiveSync(__dirname);
+const files = core.file.readdirRecursiveSync(__dirname, {fullPath: true, filter: ['filterme.js']});
+
 const searchFilePatterns = [/settings-local\.json/, /settings\.json/, /run\.js/];
 let foundCount = 0;
 
@@ -43,6 +44,6 @@ for (let pattern of searchFilePatterns) {
 	}
 }
 
-assert.equal(foundCount, files.length, 'Expected file(s) not returned from file.readdirRecursiveSync()');
+assert.equal(foundCount, searchFilePatterns.length, 'Expected file(s) not returned from file.readdirRecursiveSync()');
 
 console.log('All tests passed');
