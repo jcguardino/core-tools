@@ -6,6 +6,10 @@ Simple utilities to facilitate common functions.
 
 Uses nconf to read settings from files.
 
+**exception**
+
+Basic exception handling.
+
 **string**
 
 String manipulation functions, such as formatting.
@@ -16,4 +20,4 @@ Encrypt/decrypt strings.
 
 **logger**
 
-Console logger.
+log4js logger.

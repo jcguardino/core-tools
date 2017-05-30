@@ -12,6 +12,7 @@ module.exports = {
 	exception: exception,
 	file: file,
 	logger: logger,
+	log: logger, // alias
 	security: security,
 	string: string
 };

@@ -1,6 +1,6 @@
 {
   "name": "core-tools",
-  "version": "1.2.1",
+  "version": "1.2.5",
   "description": "Core Tools",
   "license": "MIT",
   "main": "./core.js",
@@ -16,8 +16,10 @@
   },
   "dependencies": {
     "camel-case": "^3.0.0",
+    "circular-json": "^0.3.1",
     "crypto-js": "^3.1.6",
     "lodash": "^4.16.2",
+    "log4js": "^1.1.1",
     "moment": "^2.15.1",
     "nconf": "~0.6.7",
     "node-cryptojs-aes": "^0.4.0",
