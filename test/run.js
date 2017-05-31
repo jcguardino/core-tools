@@ -35,6 +35,8 @@ core.logger.debug('ok'); // This shouldn't output anything since DEBUG is lower 
 core.logger.warn('ok'); // But this should log to the console since WARN is higher than INFO
 
 // exception
+core.exception.handle(new Error('no options'));
+
 core.exception.setOptions({
 	notify: exceptionCallback
 });
