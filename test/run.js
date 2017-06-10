@@ -21,6 +21,9 @@ assert.equal(core.string.format('{0}:{1}', ['key', 'value']), 'key:value');
 assert.equal(core.string.format('{0}:{1}:{2}', ['key', 'value1', 'value2']), 'key:value1:value2');
 assert.equal(core.string.camelCase('abc-def'), 'abcDef');
 assert.equal(core.string.pascalCase('abc-def'), 'AbcDef');
+core.string.log({a: 1, b: 'c'}, 'x');
+core.string.labelLog('mylabel', 'myvalue');
+core.string.labelLog('mylabel', {a: 1, b: 'c'});
 console.log(core.string.ifypretty({a: 1, b: 2}));
 
 // security
