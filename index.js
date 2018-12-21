@@ -8,11 +8,12 @@ const security = require('./lib/security');
 const string = require('./lib/string');
 
 module.exports = {
-	config: config,
-	exception: exception,
-	file: file,
-	logger: logger,
+	config,
+	exception,
+	error: exception, // alias
+	file,
+	logger,
 	log: logger, // alias
-	security: security,
-	string: string
+	security,
+	string
 };

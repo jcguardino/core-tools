@@ -5,7 +5,7 @@ class File {
 	constructor() {
 	}
 
-	readdirRecursiveSync(rootDir, options = {}, currentDir = '', paths = []) {
+	readdirRecursiveSync = (rootDir, options = {}, currentDir = '', paths = []) => {
 		for (let file of fs.readdirSync(rootDir)) {
 			let filePath = path.join(rootDir, file);
 			if (fs.statSync(filePath).isDirectory()) {

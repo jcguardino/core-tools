@@ -1,4 +1,5 @@
 {
 	"myConfig": "config",
-	"myConfig-overwrite": "default"
+	"myConfig-overwrite": "default",
+	"key1": "newvalue1"
 }

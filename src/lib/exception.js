@@ -7,11 +7,11 @@ class Exception {
 		this.defaultOptions = {};
 	}
 
-	setOptions(defaultOptions) {
+	setOptions = defaultOptions => {
 		this.defaultOptions = defaultOptions;
-	}
+	};
 
-	handle(err, options) {
+	handle = (err, options) => {
 		if (!options || Object.keys(options).length === 0) {
 			options = this.defaultOptions;
 		} else {
@@ -33,7 +33,12 @@ class Exception {
 				.send('error')
 				.end();
 		}
-	}
+	};
+
+	flatten = err => {
+		if (!err) return '';
+		return '' + (err.message ? err.message + ': ' : '') + (err.stack ? ' ' + err.stack : '');
+	};
 }
 
 module.exports = new Exception();

@@ -32,13 +32,13 @@ class Security {
 	constructor() {
 	}
 
-	encryptString(str, key) {
+	encryptString = (str, key) => {
 		return crypto.AES.encrypt(str, key || (process.env.CORE_TOOLS_CRYPTO_KEY || 'Set default encryption salt here')).toString();
-	}
+	};
 
-	decryptString(str, key) {
+	decryptString = (str, key) => {
 		return crypto.AES.decrypt(str, key || (process.env.CORE_TOOLS_CRYPTO_KEY || 'Set default encryption salt here')).toString(crypto.enc.Utf8);
-	}
+	};
 }
 
 module.exports = new Security();

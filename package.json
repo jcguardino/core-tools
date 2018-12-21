@@ -1,32 +1,43 @@
 {
-  "name": "core-tools",
-  "version": "1.2.8",
-  "description": "Core Tools",
-  "license": "MIT",
-  "main": "./core.js",
-  "engines": {
-    "node": ">=6.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jcguardino/core-tools.git"
-  },
-  "scripts": {
-    "test": "node test/run"
-  },
-  "dependencies": {
-    "camel-case": "^3.0.0",
-    "circular-json": "^0.3.1",
-    "crypto-js": "^3.1.6",
-    "lodash": "^4.16.2",
-    "log4js": "^1.1.1",
-    "moment": "^2.15.1",
-    "nconf": "~0.6.7",
-    "node-cryptojs-aes": "^0.4.0",
-    "pascal-case": "^2.0.0",
-    "stdio": "^0.2.7",
-    "string-template": "^1.0.0",
-    "title-case": "^2.1.0",
-    "trim": "0.0.1"
-  }
+	"name": "core-tools",
+	"version": "2.1.0",
+	"description": "Core tools that any Node app could use.",
+	"author": "jcguardino",
+	"license": "MIT",
+	"main": "./core.js",
+	"engines": {
+		"node": ">=6.0.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jcguardino/core-tools.git"
+	},
+	"scripts": {
+		"build": "babel src --out-dir dist --copy-files --no-comments && (robocopy . dist package.json README.md /NP /NJH /NJS) ^& exit 0",
+		"package": "npm run build && cd dist && npm pack && move *.tgz ../",
+		"test": "npm run build && node test/run"
+	},
+	"dependencies": {
+		"@babel/polyfill": "^7.2.3",
+		"camel-case": "^3.0.0",
+		"crypto-js": "^3.1.9-1",
+		"dashify": "^2.0.0",
+		"flatted": "^2.0.0",
+		"lodash": "^4.17.11",
+		"log4js": "^3.0.6",
+		"nconf": "^0.10.0",
+		"node-cryptojs-aes": "^0.4.0",
+		"pascal-case": "^2.0.1",
+		"stdio": "^0.2.7",
+		"string-template": "^1.0.0",
+		"title-case": "^2.1.1"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.2.3",
+		"@babel/core": "^7.2.2",
+		"@babel/preset-env": "^7.2.3",
+		"babel-plugin-transform-class-properties": "^6.24.1",
+		"babel-plugin-transform-es2015-parameters": "^6.24.1",
+		"babel-plugin-transform-object-assign": "^6.22.0"
+	}
 }
