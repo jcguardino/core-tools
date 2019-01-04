@@ -1,6 +1,6 @@
 {
 	"name": "core-tools",
-	"version": "2.1.1",
+	"version": "2.1.2",
 	"description": "Core tools that any Node app could use.",
 	"author": "jcguardino",
 	"license": "MIT",
