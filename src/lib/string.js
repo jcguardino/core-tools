@@ -3,7 +3,7 @@ const camelCasePkg = require('camel-case')
 const pascalCasePkg = require('pascal-case');
 const titleCasePkg = require('title-case');
 const dashify = require('dashify');
-const {stringify} = require('flatted');
+const stringify = require('json-stringify-safe');
 
 class String {
 	constructor() {
@@ -44,7 +44,7 @@ class String {
 	};
 
 	ifypretty = (obj, label) => {
-		return (label ? label + ': ' : '') + stringify(obj, null, '\t');
+		return (label ? label + ': ' : '') + stringify(obj, null, 4);
 	};
 
 	ifyp = (obj, label) => {

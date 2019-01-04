@@ -1,6 +1,6 @@
 {
 	"name": "core-tools",
-	"version": "2.1.0",
+	"version": "2.1.1",
 	"description": "Core tools that any Node app could use.",
 	"author": "jcguardino",
 	"license": "MIT",
@@ -22,7 +22,7 @@
 		"camel-case": "^3.0.0",
 		"crypto-js": "^3.1.9-1",
 		"dashify": "^2.0.0",
-		"flatted": "^2.0.0",
+		"json-stringify-safe": "^5.0.1",
 		"lodash": "^4.17.11",
 		"log4js": "^3.0.6",
 		"nconf": "^0.10.0",

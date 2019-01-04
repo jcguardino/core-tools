@@ -44,6 +44,7 @@ assert.equal(core.string.camelCase('abc-def'), 'abcDef');
 assert.equal(core.string.pascalCase('abc-def'), 'AbcDef');
 assert.equal(core.string.slugCase('AbcDefGhi XYZ'), 'abc-def-ghi-xyz');
 assert.equal(core.string.slugCase('AbcDefGhi XYZ', '_'), 'abc_def_ghi_xyz');
+assert.equal(core.string.ify({x: 'value-x', y: {z: 'value-z'}}), '{"x":"value-x","y":{"z":"value-z"}}');
 core.string.log({ a: 1, b: 'c' }, 'x');
 core.string.labelLog('mylabel', 'myvalue');
 core.string.labelLog('mylabel', { a: 1, b: 'c' });
